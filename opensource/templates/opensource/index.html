@@ -1,0 +1,31 @@
+
+
+{%  extends 'opensource/base.html' %}
+
+
+
+
+
+{% block main_block %}
+
+
+<table border ='1'>
+<th>name</th> <th>Age</th><th>track</th><th colspan="4">actions</th>
+
+{%  for st in all_students %}
+<tr>
+	<td>{{st.st_name}}</td>
+	<td>{{st.st_age}}</td>
+	<td>{{st.st_track}}</td>
+	<td><a href="student/{{st.id}}/details">details</a></td>
+	<td><a href="student/{{st.id}}/edit">Change</a></td>
+	<td><a href="student/{{st.id}}/delete">Delete</a></td>
+</tr>
+
+{%  endfor  %}
+</table>
+
+
+
+
+{%  endblock %}
